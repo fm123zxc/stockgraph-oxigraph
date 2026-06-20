@@ -88,6 +88,10 @@ Useful limits:
 python scripts\visualize_g6.py --max-days-per-stock 12 --max-news 20
 ```
 
+## Research Resources
+
+- [美股披露规则书籍与网站资源](docs/sec_disclosure_rules_resources.md)
+
 ## Data Inputs
 
 The builder loads the CSV files currently present in `Financial-Knowledge-Graphs\data`:
