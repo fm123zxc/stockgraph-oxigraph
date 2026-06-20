@@ -1,0 +1,7 @@
+.oxigraph/
+data/*.trig
+data/*.ttl
+data/*.nt
+data/*.nq
+__pycache__/
+*.py[cod]

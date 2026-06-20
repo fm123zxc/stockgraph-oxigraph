@@ -1,0 +1,2 @@
+pandas>=2.2
+pyoxigraph>=0.5.9

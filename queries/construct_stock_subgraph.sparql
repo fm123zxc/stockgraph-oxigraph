@@ -1,0 +1,15 @@
+PREFIX ex: <https://stockgraph.local/kg/>
+
+CONSTRUCT {
+  ?stock ?stockPredicate ?stockObject .
+  ?day ?dayPredicate ?dayObject .
+}
+WHERE {
+  VALUES ?stock { <https://stockgraph.local/kg/stock/000001.XSHE> }
+  ?stock ?stockPredicate ?stockObject .
+  OPTIONAL {
+    ?stock ex:hasTradingDay ?day .
+    ?day ?dayPredicate ?dayObject .
+  }
+}
+LIMIT 500

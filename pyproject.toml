@@ -1,0 +1,16 @@
+[project]
+name = "stockgraph-oxigraph"
+version = "0.1.0"
+description = "Oxigraph/RDF refactor of Financial-Knowledge-Graphs."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pandas>=2.2",
+  "pyoxigraph>=0.5.9",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

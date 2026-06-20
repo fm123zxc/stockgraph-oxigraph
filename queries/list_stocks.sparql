@@ -1,0 +1,11 @@
+PREFIX ex: <https://stockgraph.local/kg/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?stock ?label ?exchange
+WHERE {
+  ?stock a ex:Stock ;
+         ex:exchange ?exchange .
+  OPTIONAL { ?stock rdfs:label ?label }
+}
+ORDER BY ?stock
+LIMIT 20

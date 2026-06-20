@@ -1,0 +1,13 @@
+PREFIX ex: <https://stockgraph.local/kg/>
+PREFIX schema: <https://schema.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?publishedAt ?title ?summary
+WHERE {
+  ?news a ex:NewsArticle .
+  OPTIONAL { ?news schema:datePublished ?publishedAt }
+  OPTIONAL { ?news schema:headline ?title }
+  OPTIONAL { ?news rdfs:label ?summary }
+}
+ORDER BY DESC(?publishedAt)
+LIMIT 10

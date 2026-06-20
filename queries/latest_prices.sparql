@@ -1,0 +1,14 @@
+PREFIX ex: <https://stockgraph.local/kg/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?stock ?label ?tradeDate ?close ?volume
+WHERE {
+  ?stock a ex:Stock ;
+         ex:hasTradingDay ?day .
+  ?day ex:tradeDate ?tradeDate ;
+       ex:close ?close ;
+       ex:volume ?volume .
+  OPTIONAL { ?stock rdfs:label ?label }
+}
+ORDER BY DESC(?tradeDate)
+LIMIT 20
